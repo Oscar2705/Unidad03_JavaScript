@@ -34,8 +34,13 @@ function resultado(){
     }
     bonificacion=sueldob*bon
     sueldot=sueldob+bonificacion
+
+    sueldobruto=sueldot*0.80
+
+    
     document.getElementById("bon").innerHTML=`La bonificacion por años de servicio es ${bonificacion}`
-    document.getElementById("sueldof").innerHTML=`Y el sueldo total es ${sueldot}`
+    document.getElementById("sueldof").innerHTML=`El sueldo total es ${sueldot}`
+    document.getElementById("sueldob").innerHTML=`Y el sueldo Bruto del 80% es ${sueldobruto}`
 }
 function limpiar(){
     let name=document.getElementById(`name`).value
@@ -46,4 +51,5 @@ function limpiar(){
     document.getElementById("resultado").innerHTML=``
     document.getElementById("bon").innerHTML=``
     document.getElementById("sueldof").innerHTML=``
+    document.getElementById("sueldob").innerHTML=``
 }
