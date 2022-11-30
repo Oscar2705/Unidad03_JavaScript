@@ -14,7 +14,7 @@ function enviar(){
 
     let vali_correo= /([\w\.]+)@([\w\.]+)\.(\w+)/g //email
     let vali_celular= /^[9|6|7][0-9]{8}$/ // celular
-    let vali__contra = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm //pass
+    // let vali__contra = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm //pass
 
 
     //Realizamos la operacion
@@ -65,14 +65,14 @@ function enviar(){
     } 
     //VALIDACION DE CARACTER CONTRASEÑA------------------------------------------
 
-    if(!vali__contra.test(contrasena)){
-        let form=document.getElementById(`form`)
-        form.addEventListener("submit", function(event){
-            event.preventDefault()
+    // if(!vali__contra.test(contrasena)){
+    //     let form=document.getElementById(`form`)
+    //     form.addEventListener("submit", function(event){
+    //         event.preventDefault()
             
-        })
-        document.getElementById("mensaje_contrasena").innerHTML=`El password no cumple con los caracteres`
-    } 
+    //     })
+    //     document.getElementById("mensaje_contrasena").innerHTML=`El password no cumple con los caracteres`
+    // } 
     
     //Contraseña--------------------------------------------------------------------
     if(contrasena!=contrasena2){
@@ -82,16 +82,23 @@ function enviar(){
            
         })
         document.getElementById("repetir").style.color = "#da2f2f";
-        document.getElementById("mensaje_contrasena2").innerHTML=`Ambas contraseñas deben ser iguales`
+        document.getElementById("mensaje_contrasena2").innerHTML=`Ambas contraseñas deben ser iguales, por favor reinicie su pagina`
     } 
 
     //REVISAR QUE TODO LOS INPUTS ESTEN COMPLETO
+    //LOS LABELS DE CADA INPUT ESTARA DE ROJO SI NO HAS RELLENADO NINGUN CAMPO
     if((usuario == "") || (nombre == "") ||(correo == "") || (celular == "") || (contrasena == "") || (contrasena2 == "")){
         let form=document.getElementById(`form`)
         form.addEventListener("submit", function(event){
             event.preventDefault()
            
         })
+        document.getElementById("repetir").style.color = "#da2f2f";
+        document.getElementById("label").style.color = "#da2f2f";
+        document.getElementById("label_name").style.color = "#da2f2f";
+        document.getElementById("label_correo").style.color = "#da2f2f";
+        document.getElementById("label_celular").style.color = "#da2f2f";
+        document.getElementById("label_contrasena").style.color = "#da2f2f";
         document.getElementById("mensaje_final").innerHTML=`Debes rellenar todos los campos`
     }
   
@@ -116,5 +123,10 @@ function limpiar(){
     //COLOR
     document.getElementById("label").style.color = "black";
     document.getElementById("repetir").style.color = "black";
+    document.getElementById("label_name").style.color = "black";
+    document.getElementById("label_correo").style.color = "black";
+    document.getElementById("label_celular").style.color = "black";
+    document.getElementById("label_contrasena").style.color = "black";
+        
     
 }
