@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor{
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgb(218, 214, 214);
+    padding: 20px 30px;
+}
+.titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 50px;
+    line-height: 48px;
+}
+.titulo:nth-child(2){
+    margin-bottom: 20px;
+}
+.error{
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+label{
+    display: block;
+    margin: 10px 0;
+    font-weight: 700;
+}
+/* .row .col{
+    padding: 0 50px;
+} */
+
+form input[type="text"],[type="email"],[type="password"],[type="tel"]{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    outline: none;
+    color: rgb(119, 115, 115);
+}
+form button{    
+    display: block;
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+form button{
+    background: #b70e21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+form button:hover,
+form button:focus{
+    background-color: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
