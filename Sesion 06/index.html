@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validacion</title>
+</head>
+<body>
+    <h1>VALIDACION FORMULARIOS</h1>
+    <form action="" id="form">
+        <div>
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario">
+
+            <label id="mensaje_usuario"></label>
+
+            <label for="usuario">Nombre</label>
+            <input type="text" id="nombre">
+            <label id="mensaje_nombre"></label>
+        </div>
+
+        <div>
+            <label for="usuario">Correo</label>
+            <input type="email" id="correo">
+
+            <label for="usuario">Celular</label>
+            <input type="tel" id="celular">
+        </div>
+       
+        <div>
+            <label for="usuario">Contraseña</label>
+            <input type="password" id="contrasena">
+
+            <label for="usuario">Repetir Contraseña</label>
+            <input type="password" id="contrasena2">
+            <label id="mensaje_contrasena"></label>
+        </div>
+        <div>
+            <button type="submit" onclick="enviar()">Enviar</button>
+            <button type="reset" onclick="limpiar()">Limpiar</button>
+            <label id="mensaje_final"></label>
+        </div>
+    </form>
+    <script>
+       
+    </script>
+    <script src="ejercicio.js"></script>
+</body>
+</html>
