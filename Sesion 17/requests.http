@@ -1,0 +1,28 @@
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Mathias Avalos",
+  "age": 60,
+  "email": "mathisavalos@email.com"
+}
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+GET http://localhost:9000/api/users/639ceffc2785a03663e32f97 HTTP/1.1
+
+###
+DELETE http://localhost:9000/api/users/639ceffc2785a03663e32f97 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/users/639cf00c2785a03663e32f99 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "John Conway",
+  "age": 80,
+  "email": "johnconway@email.com"
+}
